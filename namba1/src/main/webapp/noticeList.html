@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <title>MY Page</title>
+</head>
+
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header Section Begin -->
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2">
+					<div class="header__logo">
+						<a href="./main.html"> <img src="img/logo.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<div class="header__nav">
+						<nav class="header__menu mobile-menu">
+							<ul>
+								<li class="active"><a href="./main.html">메인 홈</a></li>
+								<li><a href="./categories.html">카테고리</a></li>
+								<li><a href="./jjim.html">찜</a></li>
+								<li><a href="./emptypage.html">새로운영화</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col-lg-2">
+					<div class="header__right">
+                        <a href="#" class="search-switch"><img src = "img/search.png" alt=""></span></a>
+                        <!--로그인한경우 마이페이지 / 안한경우 로그인페이지-->
+                        <a href="./logout.html"><img src = "img/exit.png" alt=""></span></a>
+                        <a href="./myPage.do"><ima src = "img/member.png" alt=""></span></a>
+					</div>
+				</div>
+			</div>
+			<div id="mobile-menu-wrap"></div>
+		</div>
+	</header>
+
+	<!-- Header End -->
+
+	<!-- Normal Breadcrumb Begin -->
+	<section class="normal-breadcrumb set-bg" data-setbg="img/ticket.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="normal__breadcrumb__text">
+						<h2>공지사항</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Normal Breadcrumb End -->
+
+	<!-- Signup Section Begin -->
+	<section class="signup spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="row d-flex justify-content-center">
+						<div class="signup__form">
+							<h3>Sign Up</h3>
+							<form action="#">
+								<div class="input__item">
+									<input type="text" placeholder="Email address"> <span
+										class="icon_mail"></span>
+								</div>
+								<div class="input__item">
+									<input type="text" placeholder="Nick Name"> <span
+										class="icon_profile"></span>
+								</div>
+								<div class="input__item">
+									<input type="password" placeholder="Password"> <span
+										class="icon_lock"></span>
+								</div>
+								<div class="input__item">
+									<input type="password" placeholder="Check Password"> <span
+										class="icon_lock"></span>
+								</div>
+								<button type="submit" class="site-btn">complete</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Signup Section End -->
+    
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+</body>
+
+</html>

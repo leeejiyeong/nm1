@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.nambaone.prj.notice.map.NoticeMapper">
+	<select id="noticeSelectList"
+		resultType="co.nambaone.prj.notice.service.NoticeVO">
+		SELECT * FROM NOTICE ORDER BY NOTICE_NUM DESC
+	</select>
+
+	<select id="noticeSelect"
+		resultType="co.nambaone.prj.notice.service.NoticeVO">
+		SELECT * FROM NOTICE WHERE NOTICE_NUM = #{noticeNum}
+	</select>
+
+	<insert id="noticeInsert"
+		parameterType="co.nambaone.prj.notice.service.NoticeVO">
+		<selectKey keyProperty="noticeNum" resultType="int"
+			order="BEFORE">
+			SELECT
+			CASE WHEN MAX(NOTICE_NUM) IS NULL THEN 1 ELSE MAX(NOTICE_NUM) + 1 END AS
+			NOTICENUM
+			FROM NOTICE
+		</selectKey>
+		INSERT INTO NOTICE
+		VALUES(#{noticeNum},#{noticeDate},#{noticeTitle},#{noticeContent},0
+		,#{noticeFile},#{noticeFileDir})
+	</insert>
+
+	<update id="noticeUpdate"
+		parameterType="co.nambaone.prj.notice.service.NoticeVO">
+		UPDATE NOTICE
+		<set>
+			<if test="noticeDate != null">NOTICE_DATE = #{noticeDate},</if>
+			<if test="noticeTitle != null">NOTICE_TITLE = #{noticeTitle},</if>
+			<if test="noticeContent != null">NOTICE_CONTENT = #{noticeContent},</if>
+			<if test="noticeFile != null">NOTICE_FILE = #{noticeFile},</if>
+			<if test="noticeFileDir != null">NOTICE_FILE_DIR = #{noticeFileDir}</if>
+		</set>
+		WHERE NOTICE_NUM = #{noticeNum}
+	</update>
+
+	<delete id="noticeDelete"
+		parameterType="co.nambaone.prj.notice.service.NoticeVO">
+		DELETE FROM NOTICE WHERE NOTICE_NUM = #{noticeNum}
+	</delete>
+
+	<delete id="noticeAttechDelete"
+		parameterType="co.nambaone.prj.notice.service.NoticeAttechVO">
+		DELETE FROM NOTICE_ATTECH WHERE NOTICE_NUM = #{noticeNum}
+	</delete>
+
+	<insert id="noticeAttechInsert"
+		parameterType="co.nambaone.prj.notice.service.NoticeAttechVO">
+		<selectKey keyProperty="attechNum" resultType="int"
+			order="BEFORE">
+			SELECT
+			CASE WHEN MAX(ATTECH_NUM) IS NULL THEN 1 ELSE MAX(ATTECH_NUM) + 1 END AS ID
+			FROM NOTICE_ATTECH
+		</selectKey>
+		INSERT INTO NOTICE_ATTECH
+		VALUES(#{attechNum},#{noticeNum},#{noticeFile},#{noticeFileDir})
+	</insert>
+
+	<select id="noticeSearchList"
+		resultType="co.nambaone.prj.notice.service.NoticeVO">
+		SELECT * FROM NOTICE
+		<if test="key == 'all'">WHERE 1 = 1</if>
+		<if test="key == 'title'">WHERE NOTICE_TITLE LIKE '%'||#{val}||'%'</if>
+		<if test="key == 'content'">WHERE NOTICE_CONTENT LIKE '%'||#{val}||'%'</if>
+	</select>
+
+	<update id="noticeHitUpdate">
+		UPDATE NOTICE SET NOTICE_HIT = NOTICE_HIT + 1 WHERE
+		NOTICE_Num = #{NoticeNum}
+	</update>
+</mapper>
