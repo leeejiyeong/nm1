@@ -9,7 +9,7 @@ public class MainCommand implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-
+		
 		return "movie/main.tiles";
 	}
 

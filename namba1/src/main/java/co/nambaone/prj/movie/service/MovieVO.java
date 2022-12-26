@@ -18,7 +18,7 @@ public class MovieVO {
 	private String movieTeaser;
 	private String moviePoster;
 	private String movieOverview;
-	private int movieScore;
+	private float movieScore;
 	private int movieHit;
 
 	// 오티티서비스등록삭제일
