@@ -21,5 +21,6 @@ public class MovieInsertedSelect implements Command {
 		List<MovieVO> list = service.insertedSelect(vo);
 		return null;
 	}안녕하심니까.....ㅇㅇㅇdddd
+	나는 이지영
 
 }
