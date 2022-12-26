@@ -59,7 +59,7 @@ public class FrontController extends HttpServlet {
 		map.put("/movieDetail.do", new movieDetail());	//영화정보 상세보기
 		map.put("/movieWatching.do", new movieWatching());	//영화 재생화면
 		map.put("/newMovie.do", new NewMovie());	//새로운 영화
-		
+
 		//관리자
 		map.put("/adminMain.do", new AdminMain());	//관리자 메인페이지
 		map.put("/chartLine.do", new chartLine());	//회원 수 차트(라인차트)
@@ -80,7 +80,7 @@ public class FrontController extends HttpServlet {
 		map.put("/accountManage.do", new AccountManage());
 		map.put("/userJoin.do", new UserJoin()); // 회원가입 처리
 		map.put("/userJoinForm.do", new UserJoinForm()); // 회원가입 폼(signUp.jsp랑 연결)
-		map.put("/ajaxUserIdCheck.do", new AjaxuserIdCheck()); // 이메일(id) 중복 체크
+		map.put("/ajaxuserIdCheck.do", new AjaxuserIdCheck()); // 이메일(id) 중복 체크
 		map.put("/userLogin.do", new UserLogin()); // 로그인 처리
 		map.put("/userLoginForm.do", new UserLoginForm()); // 로그인 폼(login.jsp랑 연결)
 		map.put("/userLogout.do", new UserLogout()); // 로그아웃 처리

@@ -29,14 +29,15 @@ public class UserLogin implements Command {
 			session.setAttribute("id", vo.getUserEmail());
 			session.setAttribute("Nickname", vo.getUserNickname());
 			
-			message = vo.getUserNickname() + "님 환영합니다.";
+			message = vo.getUserNickname() + "님 안녕하세요.";
 			request.setAttribute("message", message);
+			return "movie/main.tiles";
 		} else {
 			message = "아이디 또는 패스워드가 틀립니다.";
 			request.setAttribute("message", message);
 		}
 		
-		return "member/userLogin.tiles";
+		return "user/userJoin.tiles";
 	}
 
 }

@@ -16,7 +16,7 @@ public class UserLogout implements Command {
 		message += "님 안녕히 가십시오";
 		session.invalidate(); // 서버에 만들어놓은 세션을 완전히 삭제
 		request.setAttribute("message", message);
-		return "member/userLogin.tiles";
+		return "user/userLogin.tiles";
 	}
 
 }
