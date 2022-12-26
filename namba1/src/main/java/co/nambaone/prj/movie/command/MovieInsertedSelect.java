@@ -35,5 +35,8 @@ public class MovieInsertedSelect implements Command {
 		}
 		return "Ajax:" + json;
 	}
+		
+	
+	
 
 }
