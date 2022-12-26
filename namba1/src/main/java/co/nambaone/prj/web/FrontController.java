@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.nambaone.prj.admin.command.AdminMain;
 import co.nambaone.prj.admin.command.Report;
+import co.nambaone.prj.admin.command.chartDonut;
+import co.nambaone.prj.admin.command.chartLine;
 import co.nambaone.prj.common.Command;
 import co.nambaone.prj.movie.command.Categories;
 import co.nambaone.prj.movie.command.Jjim;
@@ -48,32 +50,22 @@ public class FrontController extends HttpServlet {
 	public FrontController() {
 		super();
 	}
-	//sunnnhs
 	public void init(ServletConfig config) throws ServletException {
 		// 명령집단 map.put(k,v) 을 보관하는곳
-		//movie
+		//영화
 		map.put("/main.do", new MainCommand()); // 메인 페이지
 		map.put("/categories.do", new Categories());	//영화 카테고리
 		map.put("/jjim.do", new Jjim());	//찜 화면
 		map.put("/movieDetail.do", new movieDetail());	//영화정보 상세보기
 		map.put("/movieWatching.do", new movieWatching());	//영화 재생화면
 		map.put("/newMovie.do", new NewMovie());	//새로운 영화
-		
-		map.put("/adminMain.do", new AdminMain());
-		map.put("/report.do", new Report());
-		map.put("/userList.do", new UserList()); // 회원 전체목록(관리자)
-		
-		map.put("/myPage.do", new MyPage());
-		map.put("/accountManage.do", new AccountManage());
-		map.put("/userJoin.do", new UserJoin()); // 회원가입 처리
-		map.put("/userJoinForm.do", new UserJoinForm()); // 회원가입 폼(signUp.jsp랑 연결)
-		map.put("/ajaxuserIdCheck.do", new AjaxuserIdCheck()); // 이메일(id) 중복 체크
-		map.put("/userLogin.do", new UserLogin()); // 로그인 처리
-		map.put("/userLoginForm.do", new UserLoginForm()); // 로그인 폼(login.jsp랑 연결)
-		map.put("/userLogout.do", new UserLogout()); // 로그아웃 처리
-		map.put("/findPw.do", new FindPw());
-		
 
+		//관리자
+		map.put("/adminMain.do", new AdminMain());	//관리자 메인페이지
+		map.put("/chartLine.do", new chartLine());	//회원 수 차트(라인차트)
+		map.put("/chartDonut.do", new chartDonut()); //선호장르 차트(도넛차트)
+		map.put("/report.do", new Report());	//신고내역 페이지
+		map.put("/userList.do", new UserList()); // 회원 전체목록
 		
 		map.put("/noticeInsertForm.do", new NoticeInsertForm());//공지사항 등록 폼
 		map.put("/noticeList.do", new NoticeList()); //공지사항 목록
@@ -83,8 +75,16 @@ public class FrontController extends HttpServlet {
 		map.put("/noticeEdit.do", new NoticeEdit()); //공지사항 수정
 		map.put("/noticeDelete.do", new NoticeDelete()); //공지사항 삭제
 		
-		
-		//map.put(ndslfkaskd, null)
+		//유저
+		map.put("/myPage.do", new MyPage()); //마이페이지
+		map.put("/accountManage.do", new AccountManage());
+		map.put("/userJoin.do", new UserJoin()); // 회원가입 처리
+		map.put("/userJoinForm.do", new UserJoinForm()); // 회원가입 폼(signUp.jsp랑 연결)
+		map.put("/ajaxuserIdCheck.do", new AjaxuserIdCheck()); // 이메일(id) 중복 체크
+		map.put("/userLogin.do", new UserLogin()); // 로그인 처리
+		map.put("/userLoginForm.do", new UserLoginForm()); // 로그인 폼(login.jsp랑 연결)
+		map.put("/userLogout.do", new UserLogout()); // 로그아웃 처리
+		map.put("/findPw.do", new FindPw());
 		
 	}
 

@@ -5,6 +5,9 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import co.nambaone.prj.common.Command;
 import co.nambaone.prj.movie.service.MovieService;
 import co.nambaone.prj.movie.service.MovieVO;
@@ -19,7 +22,19 @@ public class MovieInsertedSelect implements Command {
 		MovieService service = new MovieServiceImpl();
 		MovieVO vo = new MovieVO();
 		List<MovieVO> list = service.insertedSelect(vo);
-		return null;
+
+		ObjectMapper mapper = new ObjectMapper();
+		
+		
+		String json = null;
+		
+		try {
+			json=mapper.writeValueAsString(list);
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "Ajax:" + json;
 	}
 
 }
