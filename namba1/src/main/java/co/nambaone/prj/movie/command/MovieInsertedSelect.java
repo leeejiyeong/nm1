@@ -19,7 +19,8 @@ public class MovieInsertedSelect implements Command {
 		MovieService service = new MovieServiceImpl();
 		MovieVO vo = new MovieVO();
 		List<MovieVO> list = service.insertedSelect(vo);
-		return null;gggggggg
-	}
+		return null;
+	}안녕하심니까.....ㅇㅇㅇdddd
+	나는 이지영
 
 }
