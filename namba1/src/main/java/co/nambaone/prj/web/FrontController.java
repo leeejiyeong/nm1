@@ -51,7 +51,13 @@ public class FrontController extends HttpServlet {
 
 	public void init(ServletConfig config) throws ServletException {
 		// 명령집단 map.put(k,v) 을 보관하는곳
-		map.put("/main.do", new MainCommand()); // 처음 실행하는 페이지 - main.do를 호출하면 maincommand 메소드가 실행되게함
+		//movie
+		map.put("/main.do", new MainCommand()); // 메인 페이지
+		map.put("/categories.do", new Categories());	//영화 카테고리
+		map.put("/jjim.do", new Jjim());	//찜 화면
+		map.put("/movieDetail.do", new movieDetail());	//영화정보 상세보기
+		map.put("/movieWatching.do", new movieWatching());	//영화 재생화면
+		map.put("/newMovie.do", new NewMovie());	//새로운 영화
 		
 		map.put("/adminMain.do", new AdminMain());
 		map.put("/report.do", new Report());
@@ -67,12 +73,6 @@ public class FrontController extends HttpServlet {
 		map.put("/userLogout.do", new UserLogout()); // 로그아웃 처리
 		map.put("/findPw.do", new FindPw());
 		
-		//movie
-		map.put("/categories.do", new Categories());	//영화 카테고리
-		map.put("/jjim.do", new Jjim());	//찜 화면
-		map.put("/movieDetail.do", new movieDetail());
-		map.put("/movieWatching.do", new movieWatching());
-		map.put("/newMovie.do", new NewMovie());
 
 		
 		map.put("/noticeInsertForm.do", new NoticeInsertForm());//공지사항 등록 폼
