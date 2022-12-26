@@ -16,9 +16,6 @@ public class UserJoin implements Command {
 		UserService dao = new UserServiceImpl();
 		UserVO vo = new UserVO();
 		String password = request.getParameter("userPassword");
-		
-		
-		System.out.println(password + "=======================");
 
 		
 		int n = 0;
@@ -30,7 +27,6 @@ public class UserJoin implements Command {
 
 		n = dao.userInsert(vo);
 		
-		System.out.println(n + "===================");
 		
 		if (n != 0) {
 //			message = "회원가입이 성공적으로 처리되었다.";
@@ -40,6 +36,6 @@ public class UserJoin implements Command {
 		}
 		request.setAttribute("message", message);
 		
-		return "user/userJoin.tiles";
+		return "user/signUp.tiles";
 	}
 }

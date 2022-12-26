@@ -13,7 +13,6 @@
 	<select id="userSelect" resultType="co.nambaone.prj.user.service.UserVO">
 		SELECT * FROM MEMBER
 		WHERE USER_EMAIL = #{userEmail}
-		<!-- ▼ 동적 시퀄, mybatis 동적SQL에 자세히 나와 있음. if와 set 많이 씀-->
 				<if test="userPassword != null">AND USER_PASSWORD = #{userPassword}</if>
 	</select>
 

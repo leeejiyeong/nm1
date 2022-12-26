@@ -103,7 +103,7 @@
 		return true;
 	}
 	
-	function idChk() { //아이디 중복체크 Ajax로 비교 
+	function idChk() {  //아이디 중복체크 Ajax로 비교 
 		let id = document.getElementById("userEmail").value;
 		let url = 'ajaxuserIdCheck.do?id='+id;
 		fetch(url).then((response)=>response.text())
