@@ -36,7 +36,7 @@ public class UserLogin implements Command {
 			request.setAttribute("message", message);
 		}
 		
-		return "member/userLogin.tiles";
+		return "user/userJoin.tiles";
 	}
 
 }

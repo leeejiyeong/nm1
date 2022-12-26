@@ -40,6 +40,6 @@ public class UserJoin implements Command {
 		}
 		request.setAttribute("message", message);
 		
-		return "member/userJoin.tiles";
+		return "user/userJoin.tiles";
 	}
 }
