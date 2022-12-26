@@ -20,6 +20,6 @@ public class MovieInsertedSelect implements Command {
 		MovieVO vo = new MovieVO();
 		List<MovieVO> list = service.insertedSelect(vo);
 		return null;
-	}dddddddddddddddddddddddddddddddddddddd
+	}안녕하심니까.....
 
 }
