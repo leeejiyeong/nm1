@@ -23,6 +23,7 @@ public class MovieInsertedSelect implements Command {
 		MovieVO vo = new MovieVO();
 		List<MovieVO> list = service.insertedSelect(vo);
 		ObjectMapper mapper = new ObjectMapper();
+<<<<<<< HEAD
 		String json = null;
 		try {
 			json=mapper.writeValueAsString(list);
@@ -34,5 +35,19 @@ public class MovieInsertedSelect implements Command {
 		return "Ajax:"+ json;
 	}
 	
+=======
+		
+		
+		String json = null;
+		
+		try {
+			json=mapper.writeValueAsString(list);
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "Ajax:" + json;
+	}
+>>>>>>> branch 'master' of https://github.com/leeejiyeong/nm1.git
 
 }
