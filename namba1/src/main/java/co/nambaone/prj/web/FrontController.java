@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.nambaone.prj.admin.command.AdminMain;
 import co.nambaone.prj.admin.command.Report;
+import co.nambaone.prj.admin.command.chartDonut;
+import co.nambaone.prj.admin.command.chartLine;
 import co.nambaone.prj.common.Command;
 import co.nambaone.prj.movie.command.Categories;
 import co.nambaone.prj.movie.command.Jjim;
@@ -48,7 +50,7 @@ public class FrontController extends HttpServlet {
 	public FrontController() {
 		super();
 	}
-	//sunnnhs
+	//lee
 	public void init(ServletConfig config) throws ServletException {
 		// 명령집단 map.put(k,v) 을 보관하는곳
 		//영화
@@ -61,6 +63,8 @@ public class FrontController extends HttpServlet {
 		
 		//관리자
 		map.put("/adminMain.do", new AdminMain());	//관리자 메인페이지
+		map.put("/chartLine.do", new chartLine());	//회원 수 차트(라인차트)
+		map.put("/chartDonut.do", new chartDonut()); //선호장르 차트(도넛차트)
 		map.put("/report.do", new Report());	//신고내역 페이지
 		map.put("/userList.do", new UserList()); // 회원 전체목록
 		

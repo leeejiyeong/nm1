@@ -1,7 +1,7 @@
 package co.nambaone.prj.user.service;
 
 import java.util.List;
-import co.nambaone.prj.user.service.UserVO;
+import java.util.Map;
 
 public interface UserService {
 	List<UserVO> userSelectList(); // 회원 전체조회
@@ -11,4 +11,9 @@ public interface UserService {
 	int userUpdate(UserVO vo); //수정
 	
 	boolean isIdCheck(String id); // 아이디 중복체크 존재하면 false
+	
+	//차트
+	List<Map<String, Integer>> chartLine();	//회원 수 차트(라인차트)
+	List<Map<String, Integer>> chartDonut();	//선호 장르 차트(도넛차트)
+	
 }
