@@ -83,7 +83,7 @@ public class FrontController extends HttpServlet {
 		map.put("/noticeDelete.do", new NoticeDelete()); //공지사항 삭제
 		
 		
-		//map.put(, null)
+		//map.put(ndslfkaskd, null)
 		
 	}
 
