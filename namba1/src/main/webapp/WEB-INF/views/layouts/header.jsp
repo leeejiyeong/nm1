@@ -16,9 +16,9 @@
 					<nav class="header__menu mobile-menu">
 						<ul>
 							<li class="active"><a href="./main.do">메인 홈</a></li>
-							<li><a href="./categories.html">카테고리</a></li>
-							<li><a href="./jjim.html">찜</a></li>
-							<li><a href="./emptypage.html">새로운영화</a></li>
+							<li><a href="./categories.do">카테고리</a></li>
+							<li><a href="./jjim.do">찜</a></li>
+							<li><a href="./newMovie.do">새로운영화</a></li>
 							<li><a href="./noticeList.do">공지사항</a></li>
 						</ul>
 					</nav>
