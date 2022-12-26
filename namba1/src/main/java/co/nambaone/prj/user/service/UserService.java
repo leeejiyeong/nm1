@@ -14,6 +14,6 @@ public interface UserService {
 	
 	//차트
 	List<Map<String, Integer>> chartLine();	//회원 수 차트(라인차트)
-	List<Map<String, Integer>> chartDonut();	//선호 장르 차트(도넛차트)
+	//-> 장르 차트는 movieService.java에 있음
 	
 }

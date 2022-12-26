@@ -1,6 +1,7 @@
 package co.nambaone.prj.movie.map;
 
 import java.util.List;
+import java.util.Map;
 
 import co.nambaone.prj.movie.service.MovieVO;
 
@@ -10,9 +11,12 @@ public interface MovieMapper {
 		List<MovieVO> willInsert(MovieVO vo);//근데 왠지 api에서 바로 가져오면 될 것 가타수,,,없어도 될 덧 나중에 검토하고 뺴든지 말든지
 		List<MovieVO> insertedSelect(MovieVO vo);//등록한 영화//db들어가잇는 것 보여주기
 		
-		int movieUpdate(MovieVO vo);//영화수정
-		int movieInsert(MovieVO vo);//단일등록
-		int movieDelete(MovieVO vo);//영화 삭제
+		int movieUpdate(MovieVO vo);  //영화수정
+		int movieInsert(MovieVO vo);  //단일등록
+		int movieDelete(MovieVO vo);  //영화 삭제
+		
+		//선호장르 차트(도넛차트)
+		List<Map<String, Integer>> chartDonut();
 		
 		
 		//등록안한것중에 검색하기....

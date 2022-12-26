@@ -1,6 +1,7 @@
 package co.nambaone.prj.user.map;
 
 import java.util.List;
+import java.util.Map;
 
 import co.nambaone.prj.user.service.UserVO;
 
@@ -12,4 +13,7 @@ public interface UserMapper {
 	int userUpdate(UserVO vo); //수정
 	
 	boolean isIdCheck(String id); // 아이디 중복체크 존재하면 false
+
+	//회원 수 차트(라인차트)
+	List<Map<String, Integer>> chartLine();
 }

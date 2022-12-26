@@ -1,6 +1,7 @@
 package co.nambaone.prj.user.serviceImpl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -46,6 +47,12 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public boolean isIdCheck(String id) {
 		return map.isIdCheck(id);
+	}
+	
+	//차트
+	@Override
+	public List<Map<String, Integer>> chartLine() {	//유저 수 차트(라인차트)		
+		return map.chartLine();
 	}
 
 

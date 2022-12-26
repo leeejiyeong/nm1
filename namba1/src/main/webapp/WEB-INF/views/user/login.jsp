@@ -52,7 +52,7 @@
 				</div>
 				<div class="col-lg-6">
 					<div class="login__register">
-						<h3>Dont’t Have An Account?</h3>
+						<h3>Don’t Have An Account?</h3>
 						<a href="userJoinForm.do" class="primary-btn">Register Now</a>
 					</div>
 				</div>

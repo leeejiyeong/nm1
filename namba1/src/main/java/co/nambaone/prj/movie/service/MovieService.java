@@ -1,6 +1,7 @@
 package co.nambaone.prj.movie.service;
 
 import java.util.List;
+import java.util.Map;
 
 public interface MovieService {
 	
@@ -15,6 +16,8 @@ public interface MovieService {
 	//등록안한것중에 검색하기....
 	//등록한 것 중에 검색하기.....
 	
-	
+	//차트
+	List<Map<String, Integer>> chartDonut();	//선호 장르 차트(도넛차트)
+	//-> 회원수 차트는 userService.java에 있음
 
 }

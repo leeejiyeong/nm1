@@ -9,7 +9,7 @@ public class AdminMain implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
+		// 관리자 페이지 메인
 		return "admin/adminMain.tiles";
 
 	}
