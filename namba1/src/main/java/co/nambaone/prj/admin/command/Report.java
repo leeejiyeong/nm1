@@ -10,7 +10,7 @@ public class Report implements Command {
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
-		return "admin/adminMain.tiles";
+		return "admin/adminMain.tiles"; ///aklskdjflaskjfd
 
 	}
 

@@ -56,7 +56,7 @@ public class FrontController extends HttpServlet {
 		map.put("/adminMain.do", new AdminMain());
 		map.put("/report.do", new Report());
 		map.put("/userList.do", new UserList()); // 회원 전체목록(관리자)
-
+		
 		map.put("/myPage.do", new MyPage());
 		map.put("/accountManage.do", new AccountManage());
 		map.put("/userJoin.do", new UserJoin()); // 회원가입 처리
@@ -67,8 +67,9 @@ public class FrontController extends HttpServlet {
 		map.put("/userLogout.do", new UserLogout()); // 로그아웃 처리
 		map.put("/findPw.do", new FindPw());
 		
-		map.put("/categories.do", new Categories());
-		map.put("/jjim.do", new Jjim());
+		//movie
+		map.put("/categories.do", new Categories());	//영화 카테고리
+		map.put("/jjim.do", new Jjim());	//찜 화면
 		map.put("/movieDetail.do", new movieDetail());
 		map.put("/movieWatching.do", new movieWatching());
 		map.put("/newMovie.do", new NewMovie());
