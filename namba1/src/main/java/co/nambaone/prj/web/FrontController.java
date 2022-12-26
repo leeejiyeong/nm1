@@ -48,7 +48,7 @@ public class FrontController extends HttpServlet {
 	public FrontController() {
 		super();
 	}
-	//sunnnhs
+
 	public void init(ServletConfig config) throws ServletException {
 		// 명령집단 map.put(k,v) 을 보관하는곳
 		//영화
