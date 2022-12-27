@@ -6,7 +6,18 @@
 <meta charset="UTF-8">
 <title>main</title>
 <script type="text/javascript" src="js/img.js"></script>
+<style type="text/css" src="css/img.js"></style>
 </head>
+
+<style>
+ .hero__itemsset-bg{
+ height: 100vh;
+}
+.product__item__picset-bg{
+ height: 55vh;
+}
+</style>
+
 
 <body>
 	<!-- Page Preloder -->
@@ -100,7 +111,7 @@
 											<li>Movie</li>
 										</ul>
 										<h5>
-											<a href="#">The Seven Deadly Sins: Wrath of the Gods</a>
+											<a href="">The Seven Deadly Sins: Wrath of the Gods</a>
 										</h5>
 									</div>
 								</div>
@@ -249,6 +260,7 @@
 										<div class="view">
 											<i class="fafa-eye"></i> 9141
 										</div>
+										여기서 무슨 장난질
 									</div>
 									<div class="product__item__text">
 										<ul>
