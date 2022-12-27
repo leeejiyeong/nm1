@@ -61,7 +61,7 @@
 <!--  -->
 									<div class="product__item__pic set-bg"
 										data-setbg="img/popular/popular-1.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -85,7 +85,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/popular/popular-2.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -108,7 +108,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/popular/popular-3.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -131,7 +131,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/popular/popular-4.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -154,7 +154,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/popular/popular-5.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -177,7 +177,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/popular/popular-6.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -200,7 +200,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/recent/recent-1.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -223,7 +223,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/recent/recent-2.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -247,7 +247,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/recent/recent-3.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -270,7 +270,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/recent/recent-4.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -293,7 +293,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/recent/recent-5.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -316,7 +316,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/recent/recent-6.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -339,7 +339,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-1.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -362,7 +362,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-2.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -386,7 +386,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-3.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -409,7 +409,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-4.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -432,7 +432,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-5.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -455,7 +455,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-6.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -478,7 +478,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-5.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -501,7 +501,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-5.jpg">
-										 
+										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -523,9 +523,12 @@
 						</div>
 					</div>
 					<div class="product__pagination">
-						<a href="#" class="current-page">1</a> <a href="#">2</a> <a
-							href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#"><i
-							class="fa fa-angle-double-right"></i></a>
+						<a href="#" class="current-page">1</a> 
+						<a href="#">2</a> 
+						<a href="#">3</a> 
+						<a href="#">4</a> 
+						<a href="#">5</a> 
+						<a href="#"><i class="fa fa-angle-double-right"></i></a>
 					</div>
 				</div>
 				

@@ -1,8 +1,20 @@
 @charset "UTF-8";
 
  .hero__itemsset-bg{
- height: 85vh;
+ height: 100vh;
 }
 .product__item__picset-bg{
  height: 50vh;
+}
+ .hero__itemsset-bg{
+ height: 100vh;
+}
+.product__item__picset-bg{
+ height: 70vh;
+ width: 27vw;
+ margin: 0px auto;
+ border-radius: 8px;
+}
+.col-lg-4col-md-6col-sm-6{
+margin:20px
 }

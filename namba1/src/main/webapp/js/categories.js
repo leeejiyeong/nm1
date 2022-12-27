@@ -17,20 +17,26 @@ fetch(url)
 		let poster = row.children[i].children[0].children[0];
 		
 		imgUrlSize = "w342";
-		console.log(data["results"][i].poster_path);
 		
 		poster.setAttribute('style','background-image: url("'+ imgUrl + imgUrlSize + data["results"][i].poster_path + '"); background-size: 230px 325px;')
-		
-		console.log(poster);
-		
 		}
+		
+		//포스터부분 링크추가(클릭시 연결)
+		
+		
+		//제목 부분
+		for(i = 0 ; i < data["results"].length ; i++){
+		
+		let row = document.querySelector('div .product__page__content').children[1];	
+		let mvtitle = row.children[i].children[0].children[1].children[1].children[0];
+		
+		mvtitle.innerText = (data["results"][i].title);
+		console.log(data["results"][i].title)
+		}
+		
 		//아이콘 부분
 		let comment = document.querySelector('div .comment'); //댓글 아이콘부분
 		let view = document.querySelector('div .view'); //조회수 부분
-		
-		
-		//텍스트부분
-		let title = document.querySelector('div .product__item__text > a');	//제목
 		
 		let ul = document.querySelector('ul') //장르아이콘(?)
 		let li = document.querySelector('li')
