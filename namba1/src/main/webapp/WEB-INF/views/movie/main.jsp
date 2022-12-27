@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>main</title>
 <script type="text/javascript" src="js/img.js"></script>
+
 </head>
 
 <body>
@@ -18,7 +19,7 @@
 	<section class="hero">
 		<div class="container">
 			<div class="hero__sliderowl-carousel">
-				<div class="hero__itemsset-bg" data-setbg="img/hero/hero-1.jpg">
+				<div class="hero__itemsset-bg">
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="hero__text">
@@ -84,8 +85,7 @@
 						<div class="row">
 							<div class="col-lg-4col-md-6col-sm-6">
 								<div class="product__item">
-									<div class="product__item__picset-bg"
-										data-setbg="img/trending/trend-1.jpg">
+									<div class="product__item__picset-bg">
 										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fafa-comments"></i> 11
@@ -107,8 +107,7 @@
 							</div>
 							<div class="col-lg-4col-md-6col-sm-6">
 								<div class="product__item">
-									<div class="product__item__picset-bg"
-										data-setbg="img/trending/trend-2.jpg">
+									<div class="product__item__picset-bg">
 										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fafa-comments"></i> 11
@@ -693,6 +692,8 @@
 				</div>
 				<div class="col-lg-4col-md-6col-sm-8">
 					<div class="product__sidebar">
+
+<!-- 사이드쪽 top view 영역 -->
 						<div class="product__sidebar__view">
 							<div class="section-title">
 								<h5>Top Views</h5>
@@ -757,6 +758,8 @@
 								</div>
 							</div>
 						</div>
+<!-- top view 영역 끝 -->
+
 						<div class="product__sidebar__comment">
 							<div class="section-title">
 								<h5>New Comment</h5>

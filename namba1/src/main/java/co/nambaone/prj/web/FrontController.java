@@ -86,6 +86,7 @@ public class FrontController extends HttpServlet {
 		map.put("/userLogout.do", new UserLogout()); // 로그아웃 처리
 		map.put("/findPw.do", new FindPw());
 		
+		
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)

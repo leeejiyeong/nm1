@@ -20,6 +20,7 @@
 							<li><a href="./jjim.do">찜</a></li>
 							<li><a href="./newMovie.do">새로운영화</a></li>
 							<li><a href="./noticeList.do">공지사항</a></li>
+							<li><a href="./main2.do">테스트</a></li>
 						</ul>
 					</nav>
 				</div>
