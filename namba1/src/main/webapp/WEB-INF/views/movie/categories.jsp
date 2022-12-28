@@ -40,16 +40,14 @@
 							<div class="row">
 								<div class="col-lg-8 col-md-8 col-sm-6">
 									<div class="section-title">
-										<h4>Romance</h4>
+										<h4>Genre</h4>
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-4 col-sm-6">
 									<div class="product__page__filter">
-										<p>Order by:</p>
+										<p>Select Genre:</p>
 										<select>
-											<option value="">A-Z</option>
-											<option value="">1-10</option>
-											<option value="">10-50</option>
+											<option value="">Action</option>
 										</select>
 									</div>
 								</div>
@@ -71,8 +69,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Sen to Chihiro no Kamikakushi</a>
@@ -95,8 +93,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Kizumonogatari III: Reiket su-hen</a>
@@ -118,8 +116,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Shirogane Tamashii hen Kouhan sen</a>
@@ -141,8 +139,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Rurouni Kenshin: Meiji Kenkaku Romantan</a>
@@ -164,8 +162,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Mushishi Zoku Shou 2nd Season</a>
@@ -187,8 +185,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Monogatari Series: Second Season</a>
@@ -210,8 +208,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Great Teacher Onizuka</a>
@@ -233,8 +231,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Fate/stay night Movie: Heaven's Feel - II.
@@ -257,8 +255,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Mushishi Zoku Shou: Suzu no Shizuku</a>
@@ -280,8 +278,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Fate/Zero 2nd Season</a>
@@ -303,8 +301,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Kizumonogatari II: Nekket su-hen</a>
@@ -326,8 +324,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">The Seven Deadly Sins: Wrath of the Gods</a>
@@ -349,8 +347,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">The Seven Deadly Sins: Wrath of the Gods</a>
@@ -372,8 +370,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Gintama Movie 2: Kanketsu-hen - Yorozuya yo
@@ -396,8 +394,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Shingeki no Kyojin Season 3 Part 2</a>
@@ -419,8 +417,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Fullmetal Alchemist: Brotherhood</a>
@@ -442,8 +440,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Shiratorizawa Gakuen Koukou</a>
@@ -465,8 +463,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Code Geass: Hangyaku no Lelouch R2</a>
@@ -488,8 +486,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Shiratorizawa Gakuen Koukou</a>
@@ -511,8 +509,8 @@
 									</div>
 									<div class="product__item__text">
 										<ul>
-											<li>Active</li>
-											<li>Movie</li>
+											
+											
 										</ul>
 										<h5>
 											<a href="#">Shiratorizawa Gakuen Koukou</a>
