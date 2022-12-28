@@ -97,7 +97,7 @@ public class FrontController extends HttpServlet {
 		String contextPath = request.getContextPath(); // 2. 그 중에서 ContextPath를 읽어온다
 		String page = uri.substring(contextPath.length()); // 3. 실제 요청명(index.jsp)을 읽어내기 위해 uri에서 contextPath만큼의 길이를 뺀
 															// 위치부터 헤아린다.
-
+		String a ="";
 		Command command = map.get(page); // map안의 키 값을 command로 찾고
 		String viewPage = command.exec(request, response); // 찾은 Command를 실행시켜서 그 결과를 받고
 
