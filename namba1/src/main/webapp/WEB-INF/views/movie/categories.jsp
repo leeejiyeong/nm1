@@ -15,20 +15,7 @@
 		<div class="loader"></div>
 	</div>
 
-	<!-- Breadcrumb Begin -->
-	<div class="breadcrumb-option">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="breadcrumb__links">
-						<a href="./main.do"><i class="fa fa-home"></i> Home</a> <a
-							href="./categories.do">Categories</a> <span>Romance</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Breadcrumb End -->
+	
 
 	<!-- Product Section Begin -->
 	<section class="product-page spad">
@@ -40,14 +27,25 @@
 							<div class="row">
 								<div class="col-lg-8 col-md-8 col-sm-6">
 									<div class="section-title">
-										<h4>Genre</h4>
+										<h4>CATEGORIES</h4>
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-4 col-sm-6">
 									<div class="product__page__filter">
 										<p>Select Genre:</p>
 										<select>
-											<option value="">Action</option>
+											<option value="">선택</option>
+											<option value=""></option>
+											<option value=""></option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+											<option value=""></option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+											<option value=""></option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                            <option value=""></option>
 										</select>
 									</div>
 								</div>
@@ -59,7 +57,7 @@
 <!--  -->
 									<div class="product__item__pic set-bg"
 										data-setbg="img/popular/popular-1.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -83,7 +81,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/popular/popular-2.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -106,7 +104,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/popular/popular-3.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -129,7 +127,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/popular/popular-4.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -152,7 +150,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/popular/popular-5.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -175,7 +173,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/popular/popular-6.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -198,7 +196,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/recent/recent-1.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -221,7 +219,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/recent/recent-2.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -245,7 +243,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/recent/recent-3.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -268,7 +266,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/recent/recent-4.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -291,7 +289,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/recent/recent-5.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -314,7 +312,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/recent/recent-6.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -337,7 +335,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-1.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -360,7 +358,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-2.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -384,7 +382,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-3.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -407,7 +405,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-4.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -430,7 +428,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-5.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -453,7 +451,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-6.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -476,7 +474,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-5.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -499,7 +497,7 @@
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
 										data-setbg="img/trending/trend-5.jpg">
-										<div class="ep">18 / 18</div>
+										
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
 										</div>
@@ -549,5 +547,6 @@
 	<!-- Search model end -->
 
 <script type="text/javascript" src="js/categories.js"></script>
+
 </body>
 </html>

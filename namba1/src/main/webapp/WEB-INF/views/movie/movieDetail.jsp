@@ -14,20 +14,6 @@
 		<div class="loader"></div>
 	</div>
 
-	<!-- Breadcrumb Begin -->
-	<div class="breadcrumb-option">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="breadcrumb__links">
-						<a href="./main.do"><i class="fa fa-home"></i> Home</a> <a
-							href="./categories.do">Categories</a> <span>Romance</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Breadcrumb End -->
 
 	<!-- Anime Section Begin -->
 	<section class="anime-details spad">
@@ -248,7 +234,7 @@
 		</div>
 	</div>
 	<!-- Search model end -->
-
+<script type="text/javascript" src="js/movieDetail.js"></script>
 </body>
 
 </html>

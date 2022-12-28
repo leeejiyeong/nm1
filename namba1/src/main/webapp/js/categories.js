@@ -14,15 +14,16 @@ fetch(mvUrl)
 		//console.log(mvData)
 
 		//포스터 부분
-		for (i = 0; i < mvData["results"].length; i++) {
+		for (i = 0; i < mvData.results.length; i++) {
 
 			let row = document.querySelector('div .product__page__content').children[1]
 			let poster = row.children[i].children[0].children[0];
 
 			imgUrlSize = "w342";
 
-			poster.setAttribute('style', 'background-image: url("' + imgUrl + imgUrlSize + mvData["results"][i].poster_path + '"); background-size: 230px 325px;')
-
+			poster.setAttribute('style', 'background-image: url("' + imgUrl + imgUrlSize + mvData.results[i].poster_path + '"); background-size: 230px 325px;')
+			
+			
 			//포스터부분 링크추가(클릭시 연결)
 			let a = document.createElement('a');
 			a.setAttribute('href', './movieDetail.do');
@@ -36,7 +37,7 @@ fetch(mvUrl)
 			let row = document.querySelector('div .product__page__content').children[1]
 			let mvtitle = row.children[i].children[0].children[1].children[1].children[0];
 
-			mvtitle.innerText = (mvData["results"][i].title);
+			mvtitle.innerText = (mvData.results[i].title);
 
 			//제목부분 링크 수정
 			//let txtTag = document.querySelector('div .product__item__text h5').children[0]
@@ -101,7 +102,7 @@ fetch(mvUrl)
 						mvGrAry = mvGr.results	//조회된 영화목록의 장르번호를 mvGrAry에 저장
 						console.log(mvGrAry)
 
-						//영화정보에서 장르 번호만 뽑아서 배열에 모으기
+						//영화정보에서 장르 번호만 뽑아서 배열에 모으기(필터링)
 						let filterGenre = [];
 						for (let genre of mvGrAry) {
 							for (i = 0; i < genre.genre_ids.length; i++) {	//장르가 또 배열이라서 for문으로 여러번 push해주기
@@ -111,21 +112,74 @@ fetch(mvUrl)
 							}
 						}
 						console.log('filterGenre', filterGenre)
-					})
+
+						//필터링한 장르번호를 option 목록에 추가
+						for (let genreId of filterGenre) {
+							console.log(genreId)
+							//장르id로 장르이름 가져오기
+							let gerLi = document.querySelector('div .product__page__filter').children[2].querySelector('li')
+							for (i = 0; i < grList.length; i++) {
+								if (genreId == grList[i].id) {
+									genreId = grList[i].name
+									console.log(grList[i].name)
+									gerLi.innerText = genreId;
+								}
+							}
+							//출력이 안됨 ⭐⭐⭐⭐ 콘솔에는 나오는데 왜 안나옴 - 현재 option 태그 야매로 작동중
+							//let select = document.querySelector('select')
+							//let opt = document.createElement('option')
+							//opt.innerText = genreId;
+							//opt.setAttribute('value',"")
+							//select.append(opt)
+
+							document.querySelector('div > ul').append(gerLi);
+						}
+						console.log("====1")
+
+						//장르 목록에 클릭 이벤트 걸기
+						document.querySelector('div > ul').addEventListener('change', selectGenreFnc)
+						console.log("====2")
+						function selectGenreFnc() {
+							for (let genreId of filterGenre) {
+								console.log("====3")	//출력안됨ㅡ
+								console.log(genreId)
+								for (i = 0; i < mvList.length; i++) {
+									if (mvList[i].genre_ids[genre_ids.length] == genreId) {
+										console.log(mvList)
+										return mvList[i];
+									}
+								}
+							}
+						}
+
+						//상세정보 페이지로 해당영화 정보 넘겨주기
+						console.log(mvGrAry)
+						//영화코드(아이디)만 뽑아서 배열에 저장하기
+						let filterCode = [];
+						for (let cd of mvGrAry) {
+							//let ary = [];
+							//ary.push('id')
+							//ary.push(cd.id)
+							//filterCode.push(ary)
+							filterCode.push(cd.id)
+						}
+						console.log('filterCode', filterCode)
+						
+						for(let i in filterCode){
+							let fc = filterCode[i]
+							console.log(fc)
+						}
+
+						//json 키:밸류 형태로 바꿔주기(안바꾸면 못넘김) -> movieDetail.js에서 받음 됨
+						let codeString = JSON.stringify(filterCode);
+						window.localStorage.setItem('id', codeString);
+
+					})	//-> 장르 선택 옵션빡스 끝
+
+
 
 			})	//-> grUrl 괄호 끝
 
-
-		//장르별로 분류하기
-		//		let mvFilter = [];
-		//		fetch(mvUrl)
-		//			.then(result => result.json())
-		//			.then(ftData => {
-
-		//				console.log(ftData)
-		//			})
-
-	})
-
+	})	//-> fetch mvUrl 괄호 끝
 
 
