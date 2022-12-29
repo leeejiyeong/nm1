@@ -29,7 +29,7 @@ function chooseList() {
 							if (ckEvtTxt == grList[i].name) {	//목록의 장르이름이랑 장르url의 장르 이름이랑 같을때
 								//console.log(grList[i].id);
 								//console.log(mvList[j].genre_ids);
-								console.log((mvList[j].genre_ids).indexOf(grList[i].id))
+								//console.log((mvList[j].genre_ids).indexOf(grList[i].id))
 								let gerNum = (mvList[j].genre_ids).indexOf(grList[i].id)	//그 장르이름의 번호가 영화정보에 장르번호로
 								if (gerNum != -1) {	//포함되어 있을때만 
 									console.log(mvList[j])	//해당 장르번호의 영화정보만..콘솔은 되는데..화면에나오게 어케함?
@@ -73,6 +73,7 @@ function test() {
 }
 
 window.onload = function() {
+	
 	//영화정보
 	let mvUrl = 'https://api.themoviedb.org/3/movie/popular?api_key=b96ed5ac7fac8cd9c2670c50e891b392&language=ko-KR&page=1';
 
@@ -196,7 +197,8 @@ window.onload = function() {
 									if (genreId == grList[i].id) {
 										genreId = grList[i].name
 										console.log(grList[i].name)
-										gerLi.innerText = genreId;
+										gerLi.innerText = genreId;										
+										gerLi.setAttribute('value',genreId)
 									}
 								}
 								//출력이 안됨 ⭐⭐⭐⭐ 콘솔에는 나오는데 왜 안나옴 - 현재 option 태그 야매로 작동중
@@ -237,8 +239,4 @@ window.onload = function() {
 	document.querySelector('.list').setAttribute('onclick', 'chooseList()');
 
 
-
-
-
-
-}
+} // -> window.onload 괄호 끝

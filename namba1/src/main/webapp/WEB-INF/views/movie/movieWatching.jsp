@@ -1,4 +1,4 @@
-<  %@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -12,22 +12,6 @@
 	<div id="preloder">
 		<div class="loader"></div>
 	</div>
-
-	<!-- Breadcrumb Begin -->
-	<div class="breadcrumb-option">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="breadcrumb__links">
-						<a href="./index.html"><i class="fa fa-home"></i> Home</a> <a
-							href="./categories.html">Categories</a> <a href="#">Romance</a> <span>Fate
-							Stay Night: Unlimited Blade</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Breadcrumb End -->
 
 	<!-- Anime Section Begin -->
 	<section class="anime-details spad">

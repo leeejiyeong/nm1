@@ -57,24 +57,22 @@
 										<ul>
 											<li><span>감독:</span> TV Series</li>
 											<li><span>출연배우:</span> Lerche</li>
-											<li><span>개봉일:</span> Oct 02, 2019 to ?</li>
-											<li><span>장르:</span> Action, Adventure, Fantasy,
-												Magic</li>
+											<li><span>장르:</span> Action, Adventure, Fantasy, Magic</li>
 										</ul>
 									</div>
 									<div class="col-lg-6 col-md-6">
 										<ul>
+											<li><span>개봉일:</span> Oct 02, 2019 to ?</li>
+											<li><span>상영시간:</span> 정보없음 </li>
 											<li><span>평점:</span> 7.31 / 1,515</li>
-											<li><span>상영시간:</span> 24 min/ep</li>
-											<li><span>제공화질:</span> HD</li>
-											<li><span>조회수:</span> 131,541</li>
+											<li><span>조회수:</span> 정보없음 </li>
 										</ul>
 									</div>
 								</div>
 							</div>
 							<div class="anime__details__btn">
 								<a href="#" class="follow-btn"><i class="fa fa-heart-o"></i>
-									Follow</a> <a href="#" class="watch-btn"><span>Watch Now</span>
+									Follow</a> <a href="./movieWatching.do" class="watch-btn"><span>Watch Now</span>
 									<i class="fa fa-angle-right"></i></a>
 							</div>
 						</div>
@@ -175,7 +173,7 @@
 						</div>
 						<div class="product__sidebar__view__item set-bg"
 							data-setbg="img/sidebar/tv-1.jpg">
-							<div class="ep">18 / ?</div>
+							
 							<div class="view">
 								<i class="fa fa-eye"></i> 9141
 							</div>
@@ -185,7 +183,7 @@
 						</div>
 						<div class="product__sidebar__view__item set-bg"
 							data-setbg="img/sidebar/tv-2.jpg">
-							<div class="ep">18 / ?</div>
+							
 							<div class="view">
 								<i class="fa fa-eye"></i> 9141
 							</div>
@@ -195,7 +193,7 @@
 						</div>
 						<div class="product__sidebar__view__item set-bg"
 							data-setbg="img/sidebar/tv-3.jpg">
-							<div class="ep">18 / ?</div>
+							
 							<div class="view">
 								<i class="fa fa-eye"></i> 9141
 							</div>
@@ -205,7 +203,7 @@
 						</div>
 						<div class="product__sidebar__view__item set-bg"
 							data-setbg="img/sidebar/tv-4.jpg">
-							<div class="ep">18 / ?</div>
+							
 							<div class="view">
 								<i class="fa fa-eye"></i> 9141
 							</div>
