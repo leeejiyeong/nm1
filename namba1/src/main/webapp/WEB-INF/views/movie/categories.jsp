@@ -33,7 +33,7 @@
 								<div class="col-lg-4 col-md-4 col-sm-6">
 									<div class="product__page__filter">
 										<p>Select Genre:</p>
-										<select>
+										<select id="temp">
 											<option value="">선택</option>
 											<option value=""></option>
 											<option value=""></option>

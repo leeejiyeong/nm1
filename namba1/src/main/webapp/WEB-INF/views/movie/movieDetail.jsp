@@ -55,21 +55,19 @@
 								<div class="row">
 									<div class="col-lg-6 col-md-6">
 										<ul>
-											<li><span>Type:</span> TV Series</li>
-											<li><span>Studios:</span> Lerche</li>
-											<li><span>Date aired:</span> Oct 02, 2019 to ?</li>
-											<li><span>Status:</span> Airing</li>
-											<li><span>Genre:</span> Action, Adventure, Fantasy,
+											<li><span>감독:</span> TV Series</li>
+											<li><span>출연배우:</span> Lerche</li>
+											<li><span>개봉일:</span> Oct 02, 2019 to ?</li>
+											<li><span>장르:</span> Action, Adventure, Fantasy,
 												Magic</li>
 										</ul>
 									</div>
 									<div class="col-lg-6 col-md-6">
 										<ul>
-											<li><span>Scores:</span> 7.31 / 1,515</li>
-											<li><span>Rating:</span> 8.5 / 161 times</li>
-											<li><span>Duration:</span> 24 min/ep</li>
-											<li><span>Quality:</span> HD</li>
-											<li><span>Views:</span> 131,541</li>
+											<li><span>평점:</span> 7.31 / 1,515</li>
+											<li><span>상영시간:</span> 24 min/ep</li>
+											<li><span>제공화질:</span> HD</li>
+											<li><span>조회수:</span> 131,541</li>
 										</ul>
 									</div>
 								</div>
