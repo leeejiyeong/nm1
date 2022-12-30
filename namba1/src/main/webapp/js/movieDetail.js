@@ -8,6 +8,7 @@ let mvUrl = 'https://api.themoviedb.org/3/movie/popular?api_key=b96ed5ac7fac8cd9
 let imgUrl = 'https://image.tmdb.org/t/p/';
 let imgUrlSize = "";
 
+
 fetch(mvUrl)
 	.then(result => result.json())
 	.then(mvData => {
@@ -231,22 +232,22 @@ fetch(mvUrl)
 					poster.setAttribute('style', 'background-image: url("' + imgUrl + imgUrlSize + rcList[i].poster_path + '"); background-size: 200px 330px;')
 
 					//포스터 링크
-					poster.setAttribute('href','./main.do') //링크바꾸기
+					//poster.setAttribute('href','./main.do') //링크바꾸기
 					
 				}
 
-//
-//				//제목
-//				for (i = 1; i < 5; i++) {
-//					let title = document.querySelector('div .anime__details__sidebar').children[i]
-//					console.log(title)
-//					console.log(rcList[i].title)
-//					title.innerText = rcList[i].title;
-//
-//					//제목부분 링크 수정
-//					title.setAttribute('href', './main.do')	//링크넣기
-//
-//				}
+
+				//제목
+				for (i = 1; i < 5; i++) {
+					let title = document.querySelector('div .anime__details__sidebar').children[i].children[1].children[0]
+					//console.log(title)
+					console.log(rcList[i].title)
+					title.innerText = rcList[i].title;
+
+					//제목부분 링크 수정
+					title.setAttribute('href', '#')	//링크넣기
+
+				}
 
 
 			})	// -> recommendUrl 괄호 끝

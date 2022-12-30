@@ -8,6 +8,8 @@ function chooseList() {
 	ckEvtTxt = event.target.textContent
 	//영화정보url
 	let mvUrl = 'https://api.themoviedb.org/3/movie/popular?api_key=b96ed5ac7fac8cd9c2670c50e891b392&language=ko-KR&page=1';
+	let imgUrl = 'https://image.tmdb.org/t/p/';
+	let imgUrlSize = "";
 	fetch(mvUrl)
 		.then(result => result.json())
 		.then(mvData => {
@@ -26,14 +28,24 @@ function chooseList() {
 					//console.log(mvList[0].genre_ids[0])	//장르번호(1개)출력됨
 					for (j = 0; j < mvList.length; j++) {
 						for (i = 0; i < grList.length; i++) {
-							if (ckEvtTxt == grList[i].name) {	//목록의 장르이름이랑 장르url의 장르 이름이랑 같을때
+							if (ckEvtTxt == grList[i].name) {	//1 옵션 목록의 장르이름이랑, 장르url의 장르 이름이랑 같을때
 								//console.log(grList[i].id);
-								//console.log(mvList[j].genre_ids);
+								console.log(mvList[j].genre_ids);
 								//console.log((mvList[j].genre_ids).indexOf(grList[i].id))
-								let gerNum = (mvList[j].genre_ids).indexOf(grList[i].id)	//그 장르이름의 번호가 영화정보에 장르번호로
-								if (gerNum != -1) {	//포함되어 있을때만 
-									console.log(mvList[j])	//해당 장르번호의 영화정보만..콘솔은 되는데..화면에나오게 어케함?
+
+								let gerNum = (mvList[j].genre_ids).indexOf(grList[i].id)	//2 그 장르이름의 번호가 영화정보에 장르번호로 포함되는지 확인하고
+								console.log(gerNum)
+								if(gerNum == -1){ //포함된 장르번호가 일치하는게 없을때는
+									/*let childd = document.querySelector('div .product__page__content').children[1].children[i]
+									childd.remove(); //돔 지우기(?)*/
+									console.log('------')
+									console.log(grList.length); 
+									document.querySelector('div .product__page__content').children[1].children[grList.length].remove();
 								}
+								if (gerNum != -1) {	//일치하는게 있을때는
+									console.log(mvList[j])	//해당 장르번호의 영화정보만..콘솔은 되는데..화면에나오게 어케함?
+//									makeDom(mvList[j])
+								} 
 							}
 						}
 					}
@@ -57,25 +69,113 @@ function test() {
 			//console.log(mvData.results)
 			let mvList = mvData.results
 			console.log(mvList[0].poster_path)
-			
+
 			//포스터 클릭이벤트의 포스터이름이랑 영화정보 포스터이름이랑 같은지 비교
 			for (i = 0; i < mvList.length; i++) {
-				if(mvList[i].poster_path == pstPath){
+				if (mvList[i].poster_path == pstPath) {
 					//json 키:밸류 형태로 바꿔주기(안바꾸면 못넘김) -> movieDetail.js에서 받음 됨
 					let mvInfo = JSON.stringify(mvList[i]);
 					window.localStorage.setItem('imgPath', mvInfo)
 				}
 
 			}
-
-
 		})
 }
+
+//돔 만들어주는 함수
+function makeDom() {
+	/*
+		<div class="col-lg-3 col-md-6 col-sm-6">
+			<div class="product__item">
+				<div class="product__item__pic set-bg" data-setbg="img/popular/popular-2.jpg">
+	
+					<div class="comment">
+						<i class="fa fa-comments"></i> 11
+					</div>
+					<div class="view">
+						<i class="fa fa-eye"></i> 9141
+					</div>
+				</div>
+				<div class="product__item__text">
+					<ul>
+	
+					</ul>
+					<h5>
+						<a href="#">Kizumonogatari III: Reiket su-hen</a>
+					</h5>
+				</div>
+			</div>
+		</div>
+	*/
+
+
+	let row = document.querySelector('div .row:nth-child(2)')
+	row.className = 'row'
+
+	let divCol = document.createElement('div')
+	divCol.className = 'col-lg-3 col-md-6 col-sm-6'
+
+	let divPro = document.createElement('div')
+	divPro.className = 'product__item'
+
+	let divBg = document.createElement('div')
+	divBg.className = 'product__item__pic set-bg'
+
+	let divCm = document.createElement('div')
+	divCm.className = 'comment'
+
+	let divVw = document.createElement('div')
+	divVw.className = 'view'
+
+	let divTxt = document.createElement('div')
+	divTxt.className = 'product__item__text'
+
+	let iCm = document.createElement('i')
+	iCm.className = 'fa fa-comments'
+
+	let iEy = document.createElement('i')
+	iEy.className = 'fa fa-eye'
+
+	let ul = document.createElement('ul')
+
+	let h5 = document.createElement('h5')
+
+	let a = document.createElement('a')
+	a.setAttribute('href', '#')
+
+	divCm.append(iCm)
+	divVw.append(iEy)
+
+	divBg.append(divCm)
+	divBg.append(divVw)
+
+	divTxt.append(ul)
+	h5.append(a)
+	divTxt.append(h5)
+
+	divPro.append(divBg)
+	divPro.append(divTxt)
+
+	divCol.append(divPro)
+
+	row.append(divCol)
+
+	let roro = document.querySelector('div .product__page__content').children[1]
+	roro.appendChild(row);
+
+
+
+
+
+}
+
+
 
 window.onload = function() {
 	
 	//영화정보
-	let mvUrl = 'https://api.themoviedb.org/3/movie/popular?api_key=b96ed5ac7fac8cd9c2670c50e891b392&language=ko-KR&page=1';
+	
+	mvUrl = "https://api.themoviedb.org/3/movie/popular?api_key=b96ed5ac7fac8cd9c2670c50e891b392&language=ko-KR&page=1";
 
 	let imgUrl = 'https://image.tmdb.org/t/p/';
 	let imgUrlSize = "";
@@ -84,7 +184,6 @@ window.onload = function() {
 		.then(result => result.json())
 		.then(mvData => {
 			//console.log(mvData)
-
 			//포스터 부분
 			for (i = 0; i < mvData.results.length; i++) {
 
@@ -197,8 +296,8 @@ window.onload = function() {
 									if (genreId == grList[i].id) {
 										genreId = grList[i].name
 										console.log(grList[i].name)
-										gerLi.innerText = genreId;										
-										gerLi.setAttribute('value',genreId)
+										gerLi.innerText = genreId;
+										gerLi.setAttribute('value', genreId)
 									}
 								}
 								//출력이 안됨 ⭐⭐⭐⭐ 콘솔에는 나오는데 왜 안나옴 - 현재 option 태그 야매로 작동중
@@ -232,11 +331,13 @@ window.onload = function() {
 
 				})	//-> grUrl 괄호 끝
 
+
 		})	//-> fetch mvUrl 괄호 끝
 
 
 	//장르 목록 옵션박스 클릭이벤트(함수는 젤 위에있슴)
 	document.querySelector('.list').setAttribute('onclick', 'chooseList()');
+
 
 
 } // -> window.onload 괄호 끝

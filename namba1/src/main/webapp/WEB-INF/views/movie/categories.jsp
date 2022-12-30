@@ -46,6 +46,7 @@
                                             <option value=""></option>
                                             <option value=""></option>
                                             <option value=""></option>
+                                            <option value=""></option>
 										</select>
 									</div>
 								</div>
@@ -546,7 +547,7 @@
 	</div>
 	<!-- Search model end -->
 
-<script type="text/javascript" src="js/categories.js"></script>
+<script type="text/javascript" src="js/categories3_bak.js"></script>
 
 </body>
 </html>
