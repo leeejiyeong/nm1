@@ -40,7 +40,6 @@ window.onload = function() {
 					engTitleTag.innerText = engTitle;
 
 					//4. 평점 투표수(별 밑에)
-					
 					let voteCnt = movie.vote_count;
 					let voteCntTag = document.querySelector('div .anime__details__rating >span')
 					voteCntTag.innerText = voteCnt + " Votes"
@@ -58,6 +57,16 @@ window.onload = function() {
 
 					//8. 장르
 					console.log(movie.genres)
+					let movieGenreAry = movie.genres
+					let genreList = [];
+					let genreLi = document.querySelector('div .anime__details__widget').children[0].children[0].querySelector('li:nth-child(3)')
+					let genreSpan = document.querySelector('div .anime__details__widget').children[0].children[0].querySelector('li:nth-child(3)').children[0]
+					for(let genre of movieGenreAry){
+						genreList.push(' '+ genre.name)
+						genreLi.innerText = genreList
+					}
+					genreLi.prepend(genreSpan);
+					
 
 					//9. 개봉일
 					let releaseDate = movie.release_date;
@@ -165,7 +174,6 @@ window.onload = function() {
 
 						//링크
 						let sideMovieId = recommendMovieAry[i].id
-						console.log(sideMovieId)
 						sidePoster.setAttribute('onclick', "selectDetail('" + sideMovieId + "')")
 						sideTitle.setAttribute('onclick', "selectDetail('" + sideMovieId + "')")
 
