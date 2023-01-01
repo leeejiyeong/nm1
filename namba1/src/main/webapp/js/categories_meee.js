@@ -1,0 +1,343 @@
+/**
+ * categories.js
+ */
+
+//장르 목록 클릭이벤트 함수
+function chooseList() {
+	console.log(event.target.textContent)
+	ckEvtTxt = event.target.textContent
+	//영화정보url
+	let mvUrl = 'https://api.themoviedb.org/3/movie/popular?api_key=b96ed5ac7fac8cd9c2670c50e891b392&language=ko-KR&page=1';
+	let imgUrl = 'https://image.tmdb.org/t/p/';
+	let imgUrlSize = "";
+	fetch(mvUrl)
+		.then(result => result.json())
+		.then(mvData => {
+
+			//장르url
+			let grUrl = "https://api.themoviedb.org/3/genre/movie/list?api_key=b96ed5ac7fac8cd9c2670c50e891b392&language=ko-KR"
+			fetch(grUrl)
+				.then(result => result.json())
+				.then(grData => {
+					//영화정보의 장르 id와 장르정보의 장르id가 같은경우 장르 이름이 나오게 출력
+					let mvList = mvData.results
+					let grList = grData.genres
+					console.log(mvList)
+					console.log(grList)
+
+					//console.log(mvList[0].genre_ids[0])	//장르번호(1개)출력됨
+					for (j = 0; j < mvList.length; j++) {
+						for (i = 0; i < grList.length; i++) {
+							if (ckEvtTxt == grList[i].name) {	//1 옵션 목록의 장르이름이랑, 장르url의 장르 이름이랑 같을때
+								//console.log(grList[i].id);
+								console.log(mvList[j].genre_ids);
+								//console.log((mvList[j].genre_ids).indexOf(grList[i].id))
+
+								let gerNum = (mvList[j].genre_ids).indexOf(grList[i].id)	//2 그 장르이름의 번호가 영화정보에 장르번호로 포함되는지 확인하고
+								console.log(gerNum)
+//								if(gerNum == -1){ //포함된 장르번호가 일치하는게 없을때는
+//									/*let childd = document.querySelector('div .product__page__content').children[1].children[i]
+//									childd.remove(); //돔 지우기(?)*/
+//									console.log('------')
+//									console.log(grList.length); 
+//									document.querySelector('div .product__page__content').children[1].children[grList.length].remove();
+//								}
+								if (gerNum != -1) {	//일치하는게 있을때는
+									console.log(mvList[j])	//해당 장르번호의 영화정보만..콘솔은 되는데..화면에나오게 어케함?
+//									makeDom(mvList[j])
+								} 
+							}
+						}
+					}
+
+				})
+
+		})
+}
+
+//a태그 클릭이벤트 함수 - 해당 이미지의 영화정보를 상세정보 페이지로 넘기기
+function test() {
+	//포스터 이미지 값 추출하기
+	//console.log(event.target.style.cssText)
+	imgUrlTxt = event.target.style.cssText
+	console.log(imgUrlTxt.substring(54, 86))
+	pstPath = imgUrlTxt.substring(54, 86)
+	let mvUrl = 'https://api.themoviedb.org/3/movie/popular?api_key=b96ed5ac7fac8cd9c2670c50e891b392&language=ko-KR&page=1';
+	fetch(mvUrl)
+		.then(result => result.json())
+		.then(mvData => {
+			//console.log(mvData.results)
+			let mvList = mvData.results
+			console.log(mvList[0].poster_path)
+
+			//포스터 클릭이벤트의 포스터이름이랑 영화정보 포스터이름이랑 같은지 비교
+			for (i = 0; i < mvList.length; i++) {
+				if (mvList[i].poster_path == pstPath) {
+					//json 키:밸류 형태로 바꿔주기(안바꾸면 못넘김) -> movieDetail.js에서 받음 됨
+					let mvInfo = JSON.stringify(mvList[i]);
+					window.localStorage.setItem('imgPath', mvInfo)
+				}
+
+			}
+		})
+}
+
+//돔 만들어주는 함수
+function makeDom() {
+	/*
+		<div class="col-lg-3 col-md-6 col-sm-6">
+			<div class="product__item">
+				<div class="product__item__pic set-bg" data-setbg="img/popular/popular-2.jpg">
+	
+					<div class="comment">
+						<i class="fa fa-comments"></i> 11
+					</div>
+					<div class="view">
+						<i class="fa fa-eye"></i> 9141
+					</div>
+				</div>
+				<div class="product__item__text">
+					<ul>
+	
+					</ul>
+					<h5>
+						<a href="#">Kizumonogatari III: Reiket su-hen</a>
+					</h5>
+				</div>
+			</div>
+		</div>
+	*/
+
+
+	let row = document.querySelector('div .row:nth-child(2)')
+	row.className = 'row'
+
+	let divCol = document.createElement('div')
+	divCol.className = 'col-lg-3 col-md-6 col-sm-6'
+
+	let divPro = document.createElement('div')
+	divPro.className = 'product__item'
+
+	let divBg = document.createElement('div')
+	divBg.className = 'product__item__pic set-bg'
+
+	let divCm = document.createElement('div')
+	divCm.className = 'comment'
+
+	let divVw = document.createElement('div')
+	divVw.className = 'view'
+
+	let divTxt = document.createElement('div')
+	divTxt.className = 'product__item__text'
+
+	let iCm = document.createElement('i')
+	iCm.className = 'fa fa-comments'
+
+	let iEy = document.createElement('i')
+	iEy.className = 'fa fa-eye'
+
+	let ul = document.createElement('ul')
+
+	let h5 = document.createElement('h5')
+
+	let a = document.createElement('a')
+	a.setAttribute('href', '#')
+
+	divCm.append(iCm)
+	divVw.append(iEy)
+
+	divBg.append(divCm)
+	divBg.append(divVw)
+
+	divTxt.append(ul)
+	h5.append(a)
+	divTxt.append(h5)
+
+	divPro.append(divBg)
+	divPro.append(divTxt)
+
+	divCol.append(divPro)
+
+	row.append(divCol)
+
+	let roro = document.querySelector('div .product__page__content').children[1]
+	roro.appendChild(row);
+
+
+
+
+
+}
+
+
+
+window.onload = function() {
+	
+	//영화정보
+	
+	mvUrl = "https://api.themoviedb.org/3/movie/popular?api_key=b96ed5ac7fac8cd9c2670c50e891b392&language=ko-KR&page=1";
+
+	let imgUrl = 'https://image.tmdb.org/t/p/';
+	let imgUrlSize = "";
+
+	fetch(mvUrl)
+		.then(result => result.json())
+		.then(mvData => {
+			//console.log(mvData)
+			//포스터 부분
+			for (i = 0; i < mvData.results.length; i++) {
+
+				let row = document.querySelector('div .product__page__content').children[1]
+				let poster = row.children[i].children[0].children[0];
+
+				imgUrlSize = "w342";
+
+				poster.setAttribute('style', 'background-image: url("' + imgUrl + imgUrlSize + mvData.results[i].poster_path + '"); background-size: 230px 325px;')
+
+
+				//포스터부분 링크추가(클릭시 연결)
+				let a = document.createElement('a');
+				a.setAttribute('href', './movieDetail.do'); // ./movieDetail.do
+				a.setAttribute('onclick', 'test()')	//a태그에 click이벤트 걸기(함수실행)
+				poster.parentElement.prepend(a)
+				a.prepend(poster)
+
+
+			}
+
+			//제목 부분
+			for (i = 0; i < mvData["results"].length; i++) {
+
+				let row = document.querySelector('div .product__page__content').children[1]
+				let mvtitle = row.children[i].children[0].children[1].children[1].children[0];
+
+				mvtitle.innerText = (mvData.results[i].title);
+
+				//제목부분 링크 수정
+				//let txtTag = document.querySelector('div .product__item__text h5').children[0]
+				txtTag = row.children[i].children[0].children[1].children[1].children[0]
+				txtTag.setAttribute('href', './movieDetail.do')
+
+			}
+
+			//아이콘 부분
+			let comment = document.querySelector('div .comment'); //댓글 아이콘부분
+			let view = document.querySelector('div .view'); //조회수 부분
+
+			//==============
+
+			//let grLi = row.children[i].children[0].children[1].children[0].children[i] -> (<li>action</li>부분임)
+
+			//제목위에 장르 표시하기
+			let grUrl = "https://api.themoviedb.org/3/genre/movie/list?api_key=b96ed5ac7fac8cd9c2670c50e891b392&language=ko-KR"
+			fetch(grUrl)
+				.then(result => result.json())
+				.then(grData => {
+					console.log(mvData.results[0].genre_ids.length)	//영화정보 장르 배열 길이(수)
+					console.log(grData.genres[0].id, grData.genres[1].name)	//장르정보에서 번호, 장르이름
+
+					let mvList = mvData.results
+					mvList[1].genre_ids	//영화정보배열의 장르정보
+					let grList = grData.genres
+					grData.genres[0].id	//장르배열 장르id
+					grData.genres[1].name	//장르배열 장르 이름
+
+					console.log(mvList[1].genre_ids)	//영화정보 전체 배열
+					console.log(grList)	//장르정보 배열
+
+					console.log(mvList.length)
+
+					//영화정보의 장르 id와 장르정보의 장르id가 같은경우 장르 이름이 나오게 출력
+					for (k = 0; k < mvList.length; k++) {
+						let row = document.querySelector('div .product__page__content').children[1]
+
+						for (j = 0; j < grList.length; j++) {
+							for (i = 0; i < mvList.length; i++) {
+
+								if (mvList[k].genre_ids[i] == grList[j].id) {
+									//console.log(grList)
+									//console.log(mvList[k].genre_ids[0])	///////
+									//console.log(grList[j].name)
+									let ul = row.children[k].children[0].children[1].querySelector('ul')
+									let li = document.createElement('li')
+									li.innerText = grList[j].name
+									ul.append(li)
+
+								}
+							}
+						}
+					}
+					//장르 선택 옵션빡스
+					let mvGrAry = [];
+					fetch(mvUrl)
+						.then(result => result.json())
+						.then(mvGr => {
+							console.log(mvGr)
+							mvGrAry = mvGr.results	//조회된 영화목록의 장르번호를 mvGrAry에 저장
+							console.log(mvGrAry)
+
+							//영화정보에서 장르 번호만 뽑아서 배열에 모으기(필터링)
+							let filterGenre = [];
+							for (let genre of mvGrAry) {
+								for (i = 0; i < genre.genre_ids.length; i++) {	//장르가 또 배열이라서 for문으로 여러번 push해주기
+									if (filterGenre.indexOf(genre.genre_ids[i]) == -1) {	//중복제거
+										filterGenre.push(genre.genre_ids[i]);
+									}
+								}
+							}
+							console.log('filterGenre', filterGenre)
+
+							//필터링한 장르번호를 option 목록에 추가
+							for (let genreId of filterGenre) {
+								console.log(genreId)
+								//장르id로 장르이름 가져오기
+								let gerLi = document.querySelector('div .product__page__filter').children[2].querySelector('li')
+								for (i = 0; i < grList.length; i++) {
+									if (genreId == grList[i].id) {
+										genreId = grList[i].name
+										console.log(grList[i].name)
+										gerLi.innerText = genreId;
+										gerLi.setAttribute('value', genreId)
+									}
+								}
+								//출력이 안됨 ⭐⭐⭐⭐ 콘솔에는 나오는데 왜 안나옴 - 현재 option 태그 야매로 작동중
+								//let select = document.querySelector('select')
+								//let opt = document.createElement('option')
+								//opt.innerText = genreId;
+								//opt.setAttribute('value',"")
+								//select.append(opt)
+
+								document.querySelector('div > ul').append(gerLi);
+							}
+							console.log("====1")
+
+							//장르 목록에 클릭 이벤트 걸기
+							/*document.querySelector('div > ul').addEventListener('change', function() {
+								for (let genreId of filterGenre) {
+									console.log("====3")	//출력안됨ㅡ
+									console.log(genreId)
+									for (i = 0; i < mvList.length; i++) {
+										if (mvList[i].genre_ids[genre_ids.length] == genreId) {
+											console.log(mvList)
+											return mvList[i];
+										}
+									}
+								}
+							})
+							*/
+
+
+						})	//-> 장르 선택 옵션빡스 끝
+
+				})	//-> grUrl 괄호 끝
+
+
+		})	//-> fetch mvUrl 괄호 끝
+
+
+	//장르 목록 옵션박스 클릭이벤트(함수는 젤 위에있슴)
+	document.querySelector('.list').setAttribute('onclick', 'chooseList()');
+
+
+
+} // -> window.onload 괄호 끝

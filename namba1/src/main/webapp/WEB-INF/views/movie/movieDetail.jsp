@@ -21,7 +21,7 @@
 			<div class="anime__details__content">
 				<div class="row">
 					<div class="col-lg-3">
-						<div class="anime__details__pic set-bg"
+						<div id = "posterDiv" class="anime__details__pic set-bg"
 							data-setbg="img/anime/details-pic.jpg">
 							<div class="comment">
 								<i class="fa fa-comments"></i> 11
@@ -65,14 +65,13 @@
 											<li><span>개봉일:</span> Oct 02, 2019 to ?</li>
 											<li><span>상영시간:</span> 정보없음 </li>
 											<li><span>평점:</span> 7.31 / 1,515</li>
-											<li><span>조회수:</span> 정보없음 </li>
 										</ul>
 									</div>
 								</div>
 							</div>
 							<div class="anime__details__btn">
 								<a href="#" class="follow-btn"><i class="fa fa-heart-o"></i>
-									Follow</a> <a href="./movieWatching.do" class="watch-btn"><span>Watch Now</span>
+									Follow</a> <a class="watch-btn"><span style="cursor:pointer">Watch Now</span>
 									<i class="fa fa-angle-right"></i></a>
 							</div>
 						</div>
