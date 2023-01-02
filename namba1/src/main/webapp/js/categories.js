@@ -101,7 +101,7 @@ function getMovieList(){
    .then(result => result.json())
    .then(data   => {
       let movieList = data.results;		//영화api에서 영화정보만 따로 빼줌
-console.log(movieList)
+	  console.log(movieList)
 
       // 장르 선택 여부에 따라서 리스트 다르게 생성
       if(searchGenreFlag == true){

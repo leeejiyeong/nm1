@@ -35,15 +35,15 @@
                     <div class="row">
                         
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="blog__item small__item set-bg" data-setbg="img/blog/blog-4.jpg">
+                            <div id = "poster" class="blog__item small__item set-bg" data-setbg="img/blog/blog-4.jpg">
                                 <div class="blog__item__text">
                                     
-                                    <h4><a href="#">Bok no Hero Academia Season 4 – 18</a></h4>
+                                    <h4><a id="title" href="#">Bok no Hero Academia Season 4 – 18</a></h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="blog__item small__item set-bg" data-setbg="img/blog/blog-5.jpg">
+                            <div id = "poster" class="blog__item small__item set-bg" data-setbg="img/blog/blog-5.jpg">
                                 <div class="blog__item__text">
                                     
                                     <h4><a href="#">Fate/Stay Night: Untimated Blade World</a></h4>
@@ -158,7 +158,7 @@
         </div>
     </div>
     <!-- Search model end -->
-
+<script type="text/javascript" src="js/jjim.js"></script>
 </body>
 
 </html>

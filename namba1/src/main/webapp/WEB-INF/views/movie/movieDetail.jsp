@@ -9,6 +9,9 @@
 </head>
 
 <body>
+<% String movieCode = request.getParameter("movieCode");%>
+	<div id="hey"><%=movieCode%></div>
+	
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
@@ -80,6 +83,28 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-8 col-md-8">
+					<div class="anime__details__form">
+						<div class="section-title">
+							<h5>Your Comment</h5>
+						</div>
+						<form name="reviewform" action="./reviewInsert.do" method="post">
+							<input type="text" name="MovieCode" id="MovieCode" value="<%=movieCode%>"> 
+							<input type="text" name="userEmail" id="userEmail" value="123@123"> 
+							<input type="text" name="userNickname" id="userNickname" value="닉네임자리('위랑가틈 자동처리')"> 
+							<input type="hidden" name="reviewDate" value="2022-12-16">&nbsp;
+							<textarea placeholder="Your Comment" id="reivewContent"
+								name="reivewContent">
+							</textarea>
+							<span class="star"> ★★★★★ <span>★★★★★</span> <input
+								type="range" oninput="drawStar(this)" value="1" step="1" min="0"
+								max="10" id="reviewScore" name="reviewScore">
+							</span>
+
+							<button id="reviewBtn" type="submit">
+								<i class="fa fa-location-arrow"></i> Review
+							</button>
+						</form>
+					</div>&nbsp;
 					<div class="anime__details__review">
 						<div class="section-title">
 							<h5>Reviews</h5>
@@ -153,17 +178,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="anime__details__form">
-						<div class="section-title">
-							<h5>Your Comment</h5>
-						</div>
-						<form action="#">
-							<textarea placeholder="Your Comment"></textarea>
-							<button type="submit">
-								<i class="fa fa-location-arrow"></i> Review
-							</button>
-						</form>
-					</div>
+					
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<div class="anime__details__sidebar">
@@ -172,7 +187,6 @@
 						</div>
 						<div class="product__sidebar__view__item set-bg"
 							data-setbg="img/sidebar/tv-1.jpg">
-							
 							<div class="view">
 								<i class="fa fa-eye"></i> 9141
 							</div>
@@ -182,7 +196,6 @@
 						</div>
 						<div class="product__sidebar__view__item set-bg"
 							data-setbg="img/sidebar/tv-2.jpg">
-							
 							<div class="view">
 								<i class="fa fa-eye"></i> 9141
 							</div>
@@ -192,7 +205,6 @@
 						</div>
 						<div class="product__sidebar__view__item set-bg"
 							data-setbg="img/sidebar/tv-3.jpg">
-							
 							<div class="view">
 								<i class="fa fa-eye"></i> 9141
 							</div>
@@ -202,7 +214,6 @@
 						</div>
 						<div class="product__sidebar__view__item set-bg"
 							data-setbg="img/sidebar/tv-4.jpg">
-							
 							<div class="view">
 								<i class="fa fa-eye"></i> 9141
 							</div>
@@ -230,6 +241,7 @@
 	</div>
 	<!-- Search model end -->
 <script type="text/javascript" src="js/movieDetail.js"></script>
+<script type="text/javascript" src="./js/movieDetailReview.js"></script>
 </body>
 
 </html>
