@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.nambaone.prj.review.map.ReviewMapper">
+	<select id="reviewSelectList"
+		resultType="co.nambaone.prj.review.service.ReviewVO">
+		SELECT * FROM REVIEW ORDER BY REIVEW_DATE DESC
+	</select>
+
+	<select id="reviewSelect"
+		resultType="co.nambaone.prj.review.service.ReviewVO">
+		SELECT * FROM REVIEW WHERE MOVIE_CODE = #{movieCode}
+	</select>
+
+	<insert id="reviewInsert"
+		parameterType="co.nambaone.prj.review.service.ReviewVO">
+		<selectKey keyProperty="reviewNum" resultType="int"
+			order="BEFORE">
+			SELECT
+			CASE WHEN MAX(REVIEW_NUM) IS NULL THEN 1 ELSE MAX(REVIEW_NUM) + 1 END AS
+			REVIEWNUM
+			FROM REVIEW
+		</selectKey>
+		INSERT INTO REVIEW
+		VALUES(#{reviewNum},#{movieCode},#{userEmail},#{userNickname},SYSDATE
+		,#{reivewContent},#{reviewScore})
+	</insert>
+
+	<update id="reviewUpdate"
+		parameterType="co.nambaone.prj.review.service.ReviewVO">
+		UPDATE NOTICE
+		<set>
+			<if test="userNickname != null">USER_NICKNAME = #{userNickname},</if>
+			<if test="reviewDate != null">REVIEW_DATE = SYSDATE + '수정됨',</if>
+			<if test="reivewContent != null">REIVEW_CONTENT = #{reivewContent},</if>
+			<if test="reviewScore != null">REVIEW_SCORE = #{reviewScore}</if>
+		</set>
+		WHERE REVIEW_NUM = #{reviewNum}
+	</update>
+
+	<delete id="reviewDelete"
+		parameterType="co.nambaone.prj.review.service.ReviewVO">
+		DELETE FROM REVIEW WHERE REVIEW_NUM = #{reviewNum}
+	</delete>
+
+	
+</mapper>
